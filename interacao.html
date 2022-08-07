@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interação</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #cabecalho{
+            width: 100%;
+            height: 80px;
+            background-color: blue;
+            text-align: center;
+            border-bottom: 2px solid black;
+            border-top: 2px solid black;
+            border-left: 2px solid black;
+            border-right: 2px solid black;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="cabecalho">
+        <h1>Teste de IMC</h1>
+    </div>
+
+
+
+    <script>
+        function pulaLinha(){
+            document.write("<br>");
+        }
+        function mostrar(frase){
+            document.write(frase);
+            pulaLinha();
+        }
+        function calculaImc(altura, peso){
+            var imc = peso / (altura * altura);
+            return imc;
+        }
+        var nome = prompt("Informe seu nome: ");
+        var pesoInformado = prompt(nome + " Informe sua altura: ");
+        var alturaInformada = prompt(nome + " Informe seu peso: ");
+        var imc = calculaImc(pesoInformado, alturaInformada);
+        mostrar("O imc de " + nome + " é: " + imc);
+
+        if (imc > 35){
+            mostrar("Seu imc está alto, você deve perder peso.");
+        }
+        if (imc < 18.5){
+            mostrar("Seu imc está baixo, você deve ganhar peso.");
+        }
+        if (imc >= 18.5 && imc <= 35){
+            mostrar("Se imc está excelente!");
+        }
+
+
+
+
+    </script>
+</body>
+</html>

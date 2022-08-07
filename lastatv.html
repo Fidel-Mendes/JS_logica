@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinha_mais_array</title>
+</head>
+<body>
+    <input>
+    <button>Teste se você acertou</button>
+    <script>
+        
+        function sorteio() {
+           return Math.round(Math.random() * 10);
+        }
+        
+        function sorteiaNum(qntd) {
+           
+            var segredos = [];
+
+            var i = 1;
+
+            while(i <= qntd){
+                var numeroAlt = sorteio();
+                if (numeroAlt !== 0){
+                        var achar = false;
+
+                        for(var posicao = 0; posicao < segredos.length; posicao++ ){
+                        
+                            if(segredos[posicao]== numeroAlt){
+                                achar = true;
+                                break;
+                            }
+
+                        }
+                        
+                        if(achar==false){
+                            segredos.push(numeroAlt);
+                            i++;
+                        }
+                } 
+            }
+            return segredos;
+        }
+        console.log(segredos);
+                                     
+       var segredos = sorteiaNum(5);
+
+        var input = document.querySelector("input");
+        input.focus();
+
+        function verificar(){
+
+                var achou = false;
+
+                for(var posicao = 0; posicao < segredos.length; posicao++){
+
+                    if(input.value == segredos[posicao]) {
+                       
+                        alert("Você acertou!");
+                        achou = true;
+                        break;        
+                }
+            }
+                        if(achou == false) {
+                        alert("Você errou!");
+                    } 
+            input.value = "";
+            input.focus(); 
+        }
+                
+
+           
+        
+        var button = document.querySelector("button");
+        button.onclick = verificar;
+       
+
+    </script>
+</body>
+</html>

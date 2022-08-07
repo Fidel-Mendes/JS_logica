@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro teste JavaScript</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-attachment: fixed;
+        }
+
+        #cabecalho{
+            width: 100% ;
+            height: 100px;
+            background-color: red;
+        }
+        .paragrafo1{
+            font-family: Arial;
+            color: black;
+            text-align: center;
+            font-size: 60px;
+        }
+        #conteudo{
+            width: 100%;
+            height: 130px;
+            background-color: transparent;
+        }
+        .paragrafo2{
+            font-family: Arial;
+            color: black;
+            font-size: 30px;
+        }
+
+
+    </style>
+</head>
+<body>
+   
+    <div id="cabecalho">
+        <p class="paragrafo1">Bem vindo!</p>
+    </div>
+
+    <div id="conteudo">
+
+        <h1>Observer abaixo algumas variações de comandos em JavaScript:</h1>
+        <p class="paragrafo2">Estes são comandos em <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript"> <u>JavaScript</u> </a> utilizando variaveis e atributos como <br>
+            document.write("");
+        </p>
+
+    </div>
+
+        <script>
+
+           // alert("Olá Mundo!"); linha comentada para não atrapalhar com alerta toda hora -->     
+
+           function pularLinha() {
+               document.write("<br>");
+           }
+           function soma() {
+               document.write(2+5);
+           }
+           function mostrar(frase){
+                document.write(frase);
+                pularLinha();
+           }
+            var ano = 2022;
+            document.write("Fidel nasceu em " + (ano - 16) + "<br>");
+            document.write("Gabriel nasceu em " + (ano - 16) + "<br>");
+            document.write("Wellington nasceu em " + (ano - 15) + "<br>");
+            document.write("Augusto nasceu em " + (ano - 16) + "<br>");
+
+
+            var idadeGabriel = 16  ;          
+            var idadeWellington = 15;
+            var idadeFidel = 16;
+            var idadeAugusto = 16;
+            var media = (idadeGabriel + idadeFidel + idadeWellington + idadeAugusto)/4;
+
+            document.write("A média das idades é:" + Math.round(media)); // Para aredondar algum valor utilizar o atributo Math.round() e entre os parentes adicionar o valor desejado -->
+
+            document.write("<br>");
+
+            var nome = "Fidel";
+
+            document.write("A idade de " + nome + "é " + idadeFidel);
+            pularLinha();
+
+            mostrar ("Testando fnção pula linha dentro de outra função de frase");
+
+             
+            var idade1 = 10;
+            var idade2 = 20;
+            var idade3 = 30;
+            var totalIdades = idade1 + idade2 + idade3;
+            var mediaIdades = totalIdades/3;
+            //alert("***Total de idades é " + totalIdades + "***");-->
+            //alert("***A média das idades é " +  mediaIdades + "***");-->
+
+            function pulaLinha() {
+                  // pulando duas linhas
+                document.write("<br><hr><br>"); 
+            }
+
+            function mostra(frase) {
+                document.write("<big>" + frase + "</big>");
+                pulaLinha()
+            }
+                mostra("Olá Mundo!");
+
+        </script> 
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de imc com JS</title>
+</head>
+<body>
+    <script>
+        function pulaLinha(){
+            document.write("<br>");
+        }
+        function mostrar (frase){
+            document.write(frase);
+            pulaLinha();
+        }
+        function calcularImc(peso, altura){
+            var imc = peso / (altura * altura);
+            return imc;
+        }
+        // fnction calcularImc(peso,altura){
+        //    return peso/ (altura * altura);
+        //} -->
+        var imcFidel = calcularImc(64, 1.69);
+        var imcGabriel = calcularImc(68, 1.75);
+        var imcMatheus = calcularImc(92, 1.88);
+
+        mostrar("O imc de fidel é: " + imcFidel);
+        mostrar("O imc de gabriel é: " + imcGabriel);
+        mostrar("O imc do matheus é: " + imcMatheus);
+
+        
+    </script>
+</body>
+</html>
